@@ -16,6 +16,19 @@
         //assert
         $this->assertEquals("Beowulf", $result);
       }
+
+      function test_makeTitleCase_multipuleWords()
+      {
+          // Arrange
+          $test_TitleCaseGenerator = new TitleCaseGenerator;
+          $input = "the jungle book";
+
+          // Act
+          $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+          // Assert
+          $this->assertEquals("The Jungle Book", $result);
+      }
     }
 
 ?>
