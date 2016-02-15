@@ -12,5 +12,10 @@
         return $app['twig']->render("home.html.twig");
     });
 
+    $app->get('/view_title_case', function() use ($app) {
+        $new_title_case = new TitleCaseGenerator;
+        $user_input_title_case = $new_title_case->makeTitleCase($_GET['phrase']);
+        return $user_input_title_case;
+    });
     return $app;
 ?>
