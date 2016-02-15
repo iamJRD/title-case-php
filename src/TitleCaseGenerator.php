@@ -4,7 +4,8 @@
     {
         function makeTitleCase($input_title)
         {
-            return ucwords($input_title);
+            $lower_case = strtolower($input_title);
+            return ucwords($lower_case);
         }
     }
 
